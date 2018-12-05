@@ -1,5 +1,5 @@
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.1.51"
+    id "org.jetbrains.kotlin.jvm" version "1.2.71"
 }
 
 group 'de.mkammerer'
@@ -11,16 +11,16 @@ apply plugin: 'application'
 mainClassName = 'org.aoc.MainKt'
 
 dependencies {
+	compile 'com.andreapivetta.kolor:kolor:0.0.2'
     compile 'org.jetbrains.kotlin:kotlin-stdlib'
-    compile 'org.jetbrains.kotlin:kotlin-stdlib-jre8'
+    compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 }
 repositories {
     mavenCentral()
+    jcenter()
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.2.1'
-}
+wrapper{ gradleVersion = '4.9' }
 
 compileKotlin {
     kotlinOptions {
