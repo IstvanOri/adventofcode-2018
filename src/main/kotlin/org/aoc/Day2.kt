@@ -13,7 +13,7 @@ class Day2 : Day{
 		println()
 		println("Calculating checksum...")
 		println()
-		File(Day1::class.java.getResource("2.txt").file).forEachLine {it -> check(it)}
+		File(Day2::class.java.getResource("2.txt").file).forEachLine {it -> check(it)}
 		val checksum: Int = condition2Count * condition3Count
 		
 		print("Box id checksum is ")
@@ -35,7 +35,7 @@ class Day2 : Day{
 	}
 	
 	private fun findId(): String{
-		val sorted = File(Day1::class.java.getResource("2.txt").file).readLines().sorted()
+		val sorted = File(Day2::class.java.getResource("2.txt").file).readLines().sorted()
 		for(i in 1..sorted.size-1){
 			if(simplifiedLevenshtein(sorted.get(i), sorted.get(i-1))==1){
 				return commonParts(sorted.get(i), sorted.get(i-1))
