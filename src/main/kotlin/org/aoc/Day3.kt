@@ -11,7 +11,7 @@ class Day3 : Day{
 		println("These lil' firecrackers aren't the brightest candles on the cake.")
 		print("They've claimed the parts and ")
 		
-		val parsed = File(Day1::class.java.getResource("3.txt").file).readLines().map {it -> parse(it)}
+		val parsed = File(Day3::class.java.getResource("3.txt").file).readLines().map {it -> parse(it)}
 		
 		val row: Int = parsed.map { x -> x.p[0] + x.size[0] }.max()!!
 		val column: Int = parsed.map { x -> x.p[1] + x.size[1] }.max()!!

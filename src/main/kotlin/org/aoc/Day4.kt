@@ -12,7 +12,7 @@ import java.time.Duration
 class Day4: Day {
 	
 	override fun run() {
-		val chronological = File(Day1::class.java.getResource("4.txt").file).readLines().map {it -> parse(it)}.sortedBy { x -> x.dateTime }
+		val chronological = File(Day4::class.java.getResource("4.txt").file).readLines().map {it -> parse(it)}.sortedBy { x -> x.dateTime }
 		
 		var currentGuard: Int = 0
 		var fellAsleepAt: LocalDateTime = LocalDateTime.MIN
